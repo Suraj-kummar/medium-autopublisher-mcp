@@ -1,0 +1,27 @@
+# ─── Medium Auto-Publisher MCP Server ─────────────────────────────────────────
+# Usage:  docker compose up --build
+# Stop:   docker compose down
+
+services:
+  medium-autopublisher:
+    build: .
+    container_name: medium-autopublisher
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - SCHEDULER_DB_PATH=/app/data/scheduler.db
+      - JOBS_DB_PATH=/app/data/jobs.db
+    volumes:
+      # Persist drafts, databases, and logs across restarts
+      - ./drafts:/app/drafts
+      - ./data:/app/data
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "medium-autopublisher": {
+      "command": "python",
+      "args": ["C:/Users/suraj/OneDrive/Desktop/medium-autopublisher-mcp/server.py"],
+      "env": {
+        "PYTHONPATH": "C:/Users/suraj/OneDrive/Desktop/medium-autopublisher-mcp"
+      }
+    }
+  }
+}
