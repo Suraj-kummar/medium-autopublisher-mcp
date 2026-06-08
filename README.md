@@ -18,7 +18,7 @@ When triggered (by schedule or immediately), the server runs a **5-stage autonom
 
 ---
 
-## MCP Tools
+## MCP Tools  
 
 | Tool | Description |
 |------|-------------|
