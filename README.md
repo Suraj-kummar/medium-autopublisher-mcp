@@ -32,7 +32,7 @@ When triggered (by schedule or immediately), the server runs a **5-stage autonom
 | `read_draft` | Read a specific draft's full markdown content |
 | `generate_calendar` | AI-powered content calendar — generates topic ideas with tags, dates, and rationale |
 | `batch_schedule` | Schedule multiple articles at once from a calendar or manual list |
-
+ 
 ---
 
 ## Project Structure
