@@ -4,7 +4,7 @@ An autonomous, production-grade MCP server that researches, writes, illustrates,
 
 ---
 
-## What It Does
+## What It Does 
 
 When triggered (by schedule or immediately), the server runs a **5-stage autonomous pipeline**:
 
